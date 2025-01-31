@@ -79,7 +79,7 @@ export function DashboardCharts() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="col-span-2">
         <CardHeader>
           <CardTitle>Monthly Activity</CardTitle>
         </CardHeader>
@@ -102,7 +102,7 @@ export function DashboardCharts() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="col-span-2">
         <CardHeader>
           <CardTitle>Device Distribution</CardTitle>
         </CardHeader>
