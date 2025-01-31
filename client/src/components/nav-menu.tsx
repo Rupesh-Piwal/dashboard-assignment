@@ -31,9 +31,10 @@ const menuItems = [
   },
 ];
 
-interface NavMenuProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function NavMenu({ className, ...props }: NavMenuProps) {
+export function NavMenu({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   const pathname = usePathname();
 
   return (
