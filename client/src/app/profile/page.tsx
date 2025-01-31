@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { Lock, Bell, Sun, Moon } from "lucide-react";
 import {
   Card,
   CardContent,
