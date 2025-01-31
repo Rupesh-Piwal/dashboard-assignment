@@ -42,13 +42,16 @@ const areaChartData = [
 
 export function DashboardCharts() {
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-      <Card className="col-span-2">
+    <div className="space-y-4">
+      {/* Total Users Area Chart */}
+      <Card>
         <CardHeader>
-          <CardTitle>Total Users</CardTitle>
+          <CardTitle className="text-base sm:text-lg md:text-xl">
+            Total Users
+          </CardTitle>
         </CardHeader>
-        <CardContent className="p-0">
-          <ResponsiveContainer width="100%" height={300}>
+        <CardContent className="h-[300px] p-0">
+          <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={areaChartData}>
               <defs>
                 <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
@@ -64,8 +67,19 @@ export function DashboardCharts() {
                   />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="name" axisLine={false} tickLine={false} />
-              <YAxis axisLine={false} tickLine={false} />
+              <XAxis
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+                fontSize={12}
+                padding={{ left: 10, right: 10 }}
+              />
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                fontSize={12}
+                width={40}
+              />
               <Tooltip />
               <Area
                 type="monotone"
@@ -79,61 +93,80 @@ export function DashboardCharts() {
         </CardContent>
       </Card>
 
-      <Card className="col-span-2">
-        <CardHeader>
-          <CardTitle>Monthly Activity</CardTitle>
-        </CardHeader>
-        <CardContent className="p-0">
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={barChartData}>
-              <XAxis dataKey="name" axisLine={false} tickLine={false} />
-              <YAxis axisLine={false} tickLine={false} />
-              <Tooltip />
-              <Bar dataKey="total" radius={[4, 4, 0, 0]}>
-                {barChartData.map((_, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={index % 2 === 0 ? colors.primary : colors.secondary}
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </CardContent>
-      </Card>
+      {/* Lower charts grid */}
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base sm:text-lg md:text-xl">
+              Monthly Activity
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="h-[300px] p-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={barChartData}>
+                <XAxis
+                  dataKey="name"
+                  axisLine={false}
+                  tickLine={false}
+                  fontSize={12}
+                  padding={{ left: 10, right: 10 }}
+                />
+                <YAxis
+                  axisLine={false}
+                  tickLine={false}
+                  fontSize={12}
+                  width={40}
+                />
+                <Tooltip />
+                <Bar dataKey="total" radius={[4, 4, 0, 0]}>
+                  {barChartData.map((_, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={index % 2 === 0 ? colors.primary : colors.secondary}
+                    />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
 
-      <Card className="col-span-2">
-        <CardHeader>
-          <CardTitle>Device Distribution</CardTitle>
-        </CardHeader>
-        <CardContent className="p-0">
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={pieChartData}
-                dataKey="value"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                innerRadius={60}
-                outerRadius={80}
-              >
-                {pieChartData.map((_, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={
-                      [colors.primary, colors.secondary, colors.tertiary][
-                        index % 3
-                      ]
-                    }
-                  />
-                ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-        </CardContent>
-      </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base sm:text-lg md:text-xl">
+              Device Distribution
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="h-[300px] p-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={pieChartData}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={80}
+                  label
+                >
+                  {pieChartData.map((_, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={
+                        [colors.primary, colors.secondary, colors.tertiary][
+                          index % 3
+                        ]
+                      }
+                    />
+                  ))}
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
