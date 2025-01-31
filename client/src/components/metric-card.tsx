@@ -18,7 +18,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
 }) => {
   return (
     <Card
-      className={cn("bg-background/50 backdrop-blur-sm border-none", className)}
+      className={cn("bg-background/50 backdrop-blur-sm ", className)}
     >
       <CardContent className="p-6">
         <p className="text-sm text-muted-foreground font-medium">{title}</p>
