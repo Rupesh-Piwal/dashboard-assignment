@@ -43,7 +43,6 @@ const areaChartData = [
 export function DashboardCharts() {
   return (
     <div className="space-y-4">
-      {/* Total Users Area Chart */}
       <Card>
         <CardHeader>
           <CardTitle className="text-base sm:text-lg md:text-xl">
@@ -93,7 +92,7 @@ export function DashboardCharts() {
         </CardContent>
       </Card>
 
-      {/* Lower charts grid */}
+
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
         <Card>
           <CardHeader>
