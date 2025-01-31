@@ -1,8 +1,9 @@
+import { DashboardCharts } from "@/components/dashboard-charts";
 import MetricCard from "@/components/metric-card";
 
 export default function Home() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 ">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">Dashboard</h1>
       </div>
@@ -32,6 +33,7 @@ export default function Home() {
           isPositive={true}
         />
       </div>
+      <DashboardCharts />
     </div>
   );
 }

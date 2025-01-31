@@ -36,7 +36,7 @@ export default function RootLayout({
         )}
       >
         <SidebarProvider>
-          <div className="flex h-screen">
+          <div className="flex h-screen w-screen">
             <DashboardSidebar />
             <main className="flex-1 overflow-y-auto p-8">{children}</main>
           </div>
