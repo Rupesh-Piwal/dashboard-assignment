@@ -15,7 +15,7 @@ import { DashboardSidebar } from "@/components/dashboard-sidebar";
 //   subsets: ["latin"],
 // });
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dashboard-TextifyAI",
@@ -38,7 +38,9 @@ export default function RootLayout({
         <SidebarProvider>
           <div className="flex h-screen w-screen">
             <DashboardSidebar />
-            <main className="flex-1 overflow-y-auto p-8">{children}</main>
+            <main className="flex-1 overflow-y-auto p-3 md:p-8">
+              {children}
+            </main>
           </div>
         </SidebarProvider>
       </body>
