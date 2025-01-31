@@ -16,6 +16,7 @@ import {
 } from "recharts";
 import { colors } from "@/lib/colors";
 import { ActivityItem } from "./activity-item";
+import { GeoChart } from "./geo-chart"; 
 
 const barChartData = [
   { name: "Jan", total: 1200 },
@@ -41,7 +42,6 @@ const areaChartData = [
   { name: "Jun", users: 600, revenue: 3400 },
 ];
 
-// Mock activity data for the ActivityItem
 const activities = [
   {
     user: { name: "John Doe", avatar: "https://example.com/avatar1.jpg" },
@@ -63,9 +63,7 @@ const activities = [
 export function DashboardCharts() {
   return (
     <div className="space-y-4">
-      {/* First Row: Total Users and Activity Feed */}
       <div className="grid gap-4 md:grid-cols-2">
-        {/* Total Users Card */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base sm:text-lg md:text-xl">
@@ -115,7 +113,6 @@ export function DashboardCharts() {
           </CardContent>
         </Card>
 
-        {/* Activity Feed Card */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base sm:text-lg md:text-xl">
@@ -135,9 +132,7 @@ export function DashboardCharts() {
         </Card>
       </div>
 
-      {/* Second Row: Monthly Activity and Device Distribution */}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
-        {/* Monthly Activity Card */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base sm:text-lg md:text-xl">
@@ -174,7 +169,6 @@ export function DashboardCharts() {
           </CardContent>
         </Card>
 
-        {/* Device Distribution Card */}
         <Card>
           <CardHeader>
             <CardTitle className="text-base sm:text-lg md:text-xl">
@@ -208,6 +202,19 @@ export function DashboardCharts() {
                 <Tooltip />
               </PieChart>
             </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid gap-4">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base sm:text-lg md:text-xl">
+              User Distribution by Country
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="h-[400px] p-0">
+            <GeoChart />
           </CardContent>
         </Card>
       </div>
