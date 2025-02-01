@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Intern Assignment
 
-## Getting Started
+## Deployment
 
-First, run the development server:
+The project is deployed and accessible at: **[Live Demo](https://dashboard-assignment-inky-ten.vercel.app/)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Figma Design
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The original dashboard design is available on Figma: **[Figma Link](https://www.figma.com/design/FKjctW6wx0pavxMqhr4o43/Dashboard-Design---Textify?node-id=0-1&t=lx0rI2qalqW5PE63-1)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Left Tab Navigation Menu** with at least 4 sections (e.g., Home, Analytics, Settings, User Profile).
+- **Modern UI Design** with a cohesive color scheme.
+- **Multiple Content Sections**, including a summary of key metrics and a recent activity log.
+- **Responsive Design** ensuring adaptability across different screen sizes.
+- **Charts & Data Visualization** using dummy data (Bar, Pie, Line, Geo charts, etc.).
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Frontend**: Next.js, React, Tailwind CSS, ShadCN
+- **Charts**: Recharts
+- **Deployment**: Vercel
