@@ -26,7 +26,6 @@ export function ActivityItem({ user, action, timestamp }: ActivityItemProps) {
   );
 }
 
-// Example usage for multiple activity items
 export function ActivityList() {
   const activities = [
     {

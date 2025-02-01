@@ -16,7 +16,7 @@ import {
 } from "recharts";
 import { colors } from "@/lib/colors";
 import { ActivityItem } from "./activity-item";
-import { GeoChart } from "./geo-chart"; 
+import { GeoChart } from "./geo-chart";
 
 const barChartData = [
   { name: "Jan", total: 1200 },
@@ -44,19 +44,19 @@ const areaChartData = [
 
 const activities = [
   {
-    user: { name: "John Doe", avatar: "https://example.com/avatar1.jpg" },
-    action: "logged in",
-    timestamp: "2 hours ago",
+    user: { name: "Tanush", avatar: "https://example.com/avatar1.jpg" },
+    action: "Deposite from my Card",
+    timestamp: "28 January 2023",
   },
   {
-    user: { name: "Jane Smith", avatar: "https://example.com/avatar2.jpg" },
-    action: "updated profile",
-    timestamp: "3 hours ago",
+    user: { name: "Udit", avatar: "https://example.com/avatar2.jpg" },
+    action: "Deposite Paypal",
+    timestamp: "28 January 2023",
   },
   {
-    user: { name: "Alice Johnson", avatar: "https://example.com/avatar3.jpg" },
-    action: "commented on a post",
-    timestamp: "5 hours ago",
+    user: { name: "Manas", avatar: "https://example.com/avatar3.jpg" },
+    action: "",
+    timestamp: "28 January 2023",
   },
 ];
 
